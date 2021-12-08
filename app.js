@@ -19,7 +19,7 @@ let tableauUnQuatre = tableauUn.map(item => (item + 2) / 21);
 place(tableauUnQuatre);
 let tableauUnCinq = tableauUn.filter(item => item > 2);
 place(tableauUnCinq);
-let tableauUnSix = tableauUn.filter(item => item % 2 === 0);
+let tableauUnSix = tableauUn.filter(item => item % 2);
 place(tableauUnSix);
 let tableauUnSept = tableauUn.filter(item => item * 3 > 10);
 place(tableauUnSept);
