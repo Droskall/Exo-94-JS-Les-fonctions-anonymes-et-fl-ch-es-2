@@ -26,7 +26,7 @@ place(tableauUnSept);
 
 let tableauDeuxDeux = tableauDeux.map(item => item.length);
 place(tableauDeuxDeux);
-let tableauDeuxTrois = tableauDeux.map(item => item, item.length);
+let tableauDeuxTrois = tableauDeux.map(item => item + item.length);
 place(tableauDeuxTrois);
 let tableauDeuxQuatre = tableauDeux.map(item => item + item);
 place(tableauDeuxQuatre);
