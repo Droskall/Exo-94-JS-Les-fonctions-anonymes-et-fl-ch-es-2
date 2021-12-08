@@ -3,50 +3,36 @@ let tableauDeux = ["valeur1", "valeur2", "valeur3", "valeur4", "valeur5", "bidul
 
 /* Votre code ici bas */
 
-let tableauUnFoisLuiMeme = document.createElement("div");
-tableauUnFoisLuiMeme.innerHTML = (tableauUn.map((event) => event ** event)).toString();
-document.body.append(tableauUnFoisLuiMeme);
+const body = document.querySelector('body')
 
-let tableauUnFois10 = document.createElement("div");
-tableauUnFois10.innerHTML = (tableauUn.map((event) => event * 10)).toString();
-document.body.append(tableauUnFois10);
+function place (array){
+    let div = document.createElement("div")
+    div.innerHTML = array.join(" ")
+    body.appendChild(div)
+}
 
-let tableauUnAjout2 = document.createElement("div");
-tableauUnAjout2.innerHTML = (tableauUn.map((event) => (event + 2) / 21)).toString();
-document.body.append(tableauUnAjout2);
+let tableauUnDeux = tableauUn.map(item => item ** item);
+place(tableauUnDeux);
+let tableauUnTrois = tableauUn.map(item => item * 10);
+place(tableauUnTrois);
+let tableauUnQuatre = tableauUn.map(item => (item + 2) / 21);
+place(tableauUnQuatre);
+let tableauUnCinq = tableauUn.filter(item => item > 2);
+place(tableauUnCinq);
+let tableauUnSix = tableauUn.filter(item => item % 2 === 0);
+place(tableauUnSix);
+let tableauUnSept = tableauUn.filter(item => item * 3 > 10);
+place(tableauUnSept);
 
-let tableauUnPlusGrand = document.createElement("div");
-tableauUnPlusGrand.innerHTML = (tableauUn.filter((event) => event > 2)).toString();
-document.body.append(tableauUnPlusGrand);
-
-let tableauUnDivPar2 = document.createElement("div");
-tableauUnDivPar2.innerHTML = (tableauUn.filter((event) =>  (event % 2) === 0)).toString();
-document.body.append(tableauUnDivPar2);
-
-let tableauUnMultPar3 = document.createElement("div");
-tableauUnMultPar3.innerHTML = (tableauUn.filter((event) =>  (event * 3) > 10)).toString();
-document.body.append(tableauUnMultPar3);
-
-let tableauDeuxLength = document.createElement("div");
-tableauDeuxLength.innerHTML = (tableauDeux.map(event => event.length)).toString();
-document.body.append(tableauDeuxLength);
-
-let tableauDeuxLengthAndBase = document.createElement("div");
-tableauDeuxLengthAndBase.innerHTML = (tableauDeux.map(event => event + event.length)).toString();
-document.body.append(tableauDeuxLengthAndBase);
-
-let tableauDeuxLuiMeme = document.createElement("div");
-tableauDeuxLuiMeme.innerHTML = (tableauDeux.map(event => event + event)).toString();
-document.body.append(tableauDeuxLuiMeme);
-
-let tableauDeuxGrand2 = document.createElement("div");
-tableauDeuxGrand2.innerHTML = (tableauDeux.filter((event) =>  event.length > (2 + 2))).toString();
-document.body.append(tableauDeuxGrand2);
-
-let tableauDeuxModulo2 = document.createElement("div");
-tableauDeuxModulo2.innerHTML = (tableauDeux.filter((event) =>  (event.length % 2) === 0)).toString();
-document.body.append(tableauDeuxModulo2);
-
-let tableauDeuxGrand10 = document.createElement("div");
-tableauDeuxGrand10.innerHTML = (tableauDeux.filter((event) =>  (event.length - 3) > 10)).toString();
-document.body.append(tableauDeuxGrand10);
+let tableauDeuxDeux = tableauDeux.map(item => item.length);
+place(tableauDeuxDeux);
+let tableauDeuxTrois = tableauDeux.map(item => [item, item.length]);
+place(tableauDeuxTrois);
+let tableauDeuxQuatre = tableauDeux.map(item => item + item);
+place(tableauDeuxQuatre);
+let tableauDeuxCinq = tableauDeux.filter(item => item.length > 2 + 2);
+place(tableauDeuxCinq);
+let tableauDeuxSix = tableauDeux.filter(item => item.length % 2 === 0);
+place(tableauDeuxSix);
+let tableauDeuxSept = tableauDeux.filter(item => item.length -3 > 10);
+place(tableauDeuxSept);
