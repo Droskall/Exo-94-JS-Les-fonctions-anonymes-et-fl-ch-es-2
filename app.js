@@ -26,7 +26,7 @@ place(tableauUnSept);
 
 let tableauDeuxDeux = tableauDeux.map(item => item.length);
 place(tableauDeuxDeux);
-let tableauDeuxTrois = tableauDeux.map(item => [item, item.length]);
+let tableauDeuxTrois = tableauDeux.map(item => item, item.length);
 place(tableauDeuxTrois);
 let tableauDeuxQuatre = tableauDeux.map(item => item + item);
 place(tableauDeuxQuatre);
@@ -34,5 +34,5 @@ let tableauDeuxCinq = tableauDeux.filter(item => item.length > 2 + 2);
 place(tableauDeuxCinq);
 let tableauDeuxSix = tableauDeux.filter(item => item.length % 2 === 0);
 place(tableauDeuxSix);
-let tableauDeuxSept = tableauDeux.filter(item => item.length -3 > 10);
+let tableauDeuxSept = tableauDeux.filter(item => item.length - 3 > 10);
 place(tableauDeuxSept);
