@@ -12,7 +12,7 @@ tableauUnFois10.innerHTML = (tableauUn.map((event) => event * 10)).toString();
 document.body.append(tableauUnFois10);
 
 let tableauUnAjout2 = document.createElement("div");
-tableauUnAjout2.innerHTML = (tableauUn.map((event) => (event + 10) / 28)).toString();
+tableauUnAjout2.innerHTML = (tableauUn.map((event) => (event + 2) / 21)).toString();
 document.body.append(tableauUnAjout2);
 
 let tableauUnPlusGrand = document.createElement("div");
